@@ -11,9 +11,8 @@ const fetcher = function (url, localFilePath) {
       console.log(
         `Downloaded and saved ${body.length} bytes to ${localFilePath}`
       );
-      //file written successfully
     });
   });
 };
 
-fetcher("http://www.example.edu", "./written.md");
+fetcher(process.argv[2], process.argv[3]);
